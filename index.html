@@ -6,8 +6,8 @@
   <body>
     <script>
       // Create the application helper and add its render target to the page
-      let w = window.innerWidth - 10;
-      let h = window.innerHeight - 10;
+      let w = window.innerWidth - 50;
+      let h = window.innerHeight - 40;
       console.log(w);
       console.log(h);      
       let app = new PIXI.Application({ width: w, height: h });
@@ -21,7 +21,7 @@
       let elapsed = 0.0;
       app.ticker.add((delta) => {
         elapsed += delta;
-        sprite.x = 1000.0 + Math.cos(elapsed/50.0) * 700.0;
+        sprite.x = 700.0 + Math.cos(elapsed/50.0) * 700.0;
       });
     </script>
   </body>
