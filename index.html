@@ -16,7 +16,7 @@
             if (ws) {
                 return false;
             }
-            ws = new WebSocket("{{.}}");
+            ws = new WebSocket("ws://92.220.168.140:8080/echo");
             ws.onopen = function(evt) {
                 print("OPEN");
             }
