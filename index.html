@@ -13,10 +13,13 @@
             output.scroll(0, output.scrollHeight);
         };
         document.getElementById("open").onclick = function(evt) {
+            console.log("11111111111");
             if (ws) {
+                console.log("222222222222");
                 return false;
             }
             ws = new WebSocket("ws://92.220.168.140:8080/echo");
+            console.log("33333333");
             ws.onopen = function(evt) {
                 print("OPEN");
             }
@@ -28,6 +31,7 @@
                 print("RESPONSE: " + evt.data);
             }
             ws.onerror = function(evt) {
+                console.log("4444444444444444");
                 print("ERROR: " + evt.data);
             }
             return false;
